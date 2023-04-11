@@ -52,21 +52,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Unsupervised Learning for Neural 3D Composition of Humans and Objects</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://taeksuu.github.io/" target="_blank">Taeksoo Kim</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://www-scf.usc.edu/~saitos/" target="_blank">Shunsuke Saito</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://jhugestar.github.io/" target="_blank">Hanbyul Joo</a><sup>1</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                     <span class="author-block"><sup>1</sup>Seoul National University,</span>
+                     <span class="author-block"><sup>2</sup>Meta Reality Labs</span>
+<!--                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -148,7 +149,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            In this work, we present a novel framework for learning
+a compositional generative model of humans and objects
+(backpacks, coats, scarves, and more) from real-world 3D
+scans. Our compositional model is interaction-aware, mean-
+ing the spatial relationship between humans and objects, and
+the mutual shape change by physical contact is fully incor-
+porated. The key challenge is that, since humans and objects
+are in contact, their 3D scans are merged into a single piece.
+To decompose them without manual annotations, we propose
+to leverage two sets of 3D scans of a single person with and
+without objects. Our approach learns to decompose objects
+and naturally compose them back into a generative human
+model in an unsupervised manner. Despite our simple setup
+requiring only the capture of a single subject with objects,
+our experiments demonstrate the strong generalization of
+our model by enabling the natural composition of objects to
+diverse identities in various poses and the composition of
+multiple objects, which is unseen in training data.
           </p>
         </div>
       </div>
