@@ -18,3 +18,22 @@ We provide our captured raw 3D scans and the corresponding SMPL parameters used 
 
 ### Agreement
 The NCHO dataset is available for non-commercial research purposes only. Any other use, in particular any use for commercial purposes, is prohibited.
+
+
+## Citation
+
+If you use this code or dataset for your research, please cite our paper:
+
+```
+@InProceedings{Kim_2023_ICCV,
+    author    = {Kim, Taeksoo and Saito, Shunsuke and Joo, Hanbyul},
+    title     = {NCHO: Unsupervised Learning for Neural 3D Composition of Humans and Objects},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {14817-14828}
+}
+```
+
+## Thanks to
+- https://github.com/xuchen-ethz/gdna
