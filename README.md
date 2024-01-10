@@ -18,6 +18,7 @@ Setup the environment using conda.
 ```
 conda env create -f environment.yaml
 conda activate ncho
+python setup.py install
 ```
 
 Download our pretrained models.
@@ -26,7 +27,7 @@ sh ./download_data.sh
 ```
 
 ## Dataset
-We provide our captured raw 3D scans and the corresponding SMPL parameters used in the paper. Folder "200" contains scans of the person without any object. Other folders contain scans of the same person with many different objects.
+We provide our captured raw 3D scans and the corresponding SMPL parameters. Folder "200" contains scans of the single person without any object. Other folders contain scans of the same person with many different objects.
 
 
 ## Citation
