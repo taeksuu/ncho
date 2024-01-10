@@ -21,12 +21,18 @@ conda activate ncho
 python setup.py install
 ```
 
+Get SMPL models.
+```
+mkdir lib/smpl/smpl_model
+mv basicModel_f_lbs_10_207_0_v1.0.0.pkl lib/smpl/smpl_model/SMPL_NEUTRAL.pkl
+```
+
 Download our pretrained models.
 ```
 sh ./download_data.sh
 ```
 
-Run one of the following commands and check the results in ./outputs/model
+Run one of the following commands.
 
 **Disentangled Control**
 ```
