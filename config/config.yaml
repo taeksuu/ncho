@@ -1,0 +1,80 @@
+defaults:
+  - datamodule: renderpeople
+  - network: lbs 
+  - network: shape
+  - network: shape_obj
+  - network: shape_both
+  - network: disp
+
+hydra:
+  run:
+    dir: outputs/${expname}/
+
+expname: coarse
+resume: true
+starting_path: 'outputs/${expname}/checkpoints/last.ckpt'
+eval_mode: interp
+seed: 42
+agent_tot: 1
+agent_id: 0
+
+trainer:
+  max_epochs: 300
+  gradient_clip_val: 0.1
+  check_val_every_n_epoch: 1
+  deterministic: true
+  gpus: '0'
+
+  
+  log_every_n_steps: 5
+  accelerator: 'ddp'
+  profiler: 'simple'
+
+model:
+  stage: coarse
+  encoding: 'none'
+
+
+  code_category: false
+  num_category: 0
+
+  dim_shape: 64
+  dim_shape_obj: 64
+  dim_detail: 64
+  color: false
+  dim_color: 64
+
+  generator:
+    n_layers: 4
+    init_res: 16
+
+  deformer:
+    _target_: lib.model.deformer.ForwardDeformer
+    max_steps: 50
+    nonlinear_offset: false
+    init: 'bone'
+    delta_w: false
+    train_disp: false
+
+  optim:
+    lr: 1e-3
+    lr_dis: 1e-3
+
+  nepochs_pretrain: 1
+  lambda_bone_occ: 1
+  lambda_bone_w: 10
+  lambda_bone_offset: 1
+  lambda_disp: 10
+  lambda_reg: 1e-3
+  lambda_eik: 0.1
+  lambda_gan: 0
+
+  use_gan: false
+  
+  
+  ray_tracer:
+    n_secant_steps: 8
+    max_points: 500000 
+    check_cube_intersection: false
+    depth_range: [0,2]
+    n_steps: [128,129]

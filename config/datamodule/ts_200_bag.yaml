@@ -1,0 +1,15 @@
+datamodule:
+  dataset_path: ../gdna/data/Taeksoo_processed
+  data_list: ./lib/dataset/ts_200.csv
+  data_list_obj: ./lib/dataset/ts_200_bag.csv
+  data_list_thrp: ./lib/dataset/thuman.csv
+  cache_path: ${starting_path}
+  num_workers: 64
+  batch_size: 12
+  points_per_frame: 2000
+  load_img: false
+  load_cache: false
+  load_surface: false
+  load_res: 256
+  color: false
+  human: false

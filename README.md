@@ -6,7 +6,7 @@
 
 This is the official code for the ICCV 2023 paper "NCHO: Unsupervised Learning for Neural 3D Composition of Humans and Objects", a novel framework for learning a compositional generative model of humans and objects (backpacks, coats, scarves, and more) from real-world 3D scans.
 
-## Quick Start
+## Run NCHO
 
 Clone the repository.
 ```
@@ -30,14 +30,14 @@ Run one of the following commands and check the results in ./outputs/model
 
 **Disentangled Control**
 ```
-python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_hum # Same human + Different objects
-python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_obj # Same object + Different humans
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_hum # Same object + Different humans
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_obj # Same human + Different objects
 ```
 
 **Interpolation**
 ```
-python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_hum # Same human + Interpolate objects
-python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_obj # Same object + Interpolate humans
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_hum # Same object + Interpolate humans
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_obj # Same human + Interpolate objects
 ```
 
 **Random Sampling**
@@ -65,4 +65,5 @@ If you use this code or dataset for your research, please cite our paper:
 ```
 
 ## Thanks to
+The code is heavily borrowed from
 - https://github.com/xuchen-ethz/gdna
