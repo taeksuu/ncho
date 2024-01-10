@@ -26,21 +26,21 @@ Download our pretrained models.
 sh ./download_data.sh
 ```
 
-Run one of the following commands and check the results in outputs/model
+Run one of the following commands and check the results in ./outputs/model
 
-Disentangled Control
+``Disentangled Control``
 ```
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_hum # Same human + Different objects
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_obj # Same object + Different humans
 ```
 
-Interpolation
+``Interpolation``
 ```
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_hum # Same human + Interpolate objects
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_obj # Same object + Interpolate humans
 ```
 
-Random Sampling
+``Random Sampling``
 ```
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=sample # Random human + objects
 ```
