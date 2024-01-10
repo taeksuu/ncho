@@ -21,7 +21,7 @@ cd ncho
 
 Setup the environment using conda.
 ```
-conda env create -f environment.yaml
+conda env create -f env.yaml
 conda activate ncho
 python setup.py install
 ```
@@ -64,9 +64,7 @@ If you use this code or dataset for your research, please cite our paper:
     author    = {Kim, Taeksoo and Saito, Shunsuke and Joo, Hanbyul},
     title     = {NCHO: Unsupervised Learning for Neural 3D Composition of Humans and Objects},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2023},
-    pages     = {14817-14828}
+    year      = {2023}
 }
 ```
 
