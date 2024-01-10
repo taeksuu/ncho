@@ -26,6 +26,25 @@ Download our pretrained models.
 sh ./download_data.sh
 ```
 
+Run one of the following commands and check the results in outputs/model
+
+Disentangled Control
+```
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_hum # Same human + Different objects
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=dis_obj # Same object + Different humans
+```
+
+Interpolation
+```
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_hum # Same human + Interpolate objects
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_obj # Same object + Interpolate humans
+```
+
+Random Sampling
+```
+python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=sample # Random human + objects
+```
+
 ## Dataset
 We provide our captured raw 3D scans and the corresponding SMPL parameters. Folder "200" contains scans of the single person without any object. Other folders contain scans of the same person with many different objects.
 
