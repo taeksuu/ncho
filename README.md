@@ -6,8 +6,13 @@
 
 This is the official code for the ICCV 2023 paper "NCHO: Unsupervised Learning for Neural 3D Composition of Humans and Objects", a novel framework for learning a compositional generative model of humans and objects (backpacks, coats, scarves, and more) from real-world 3D scans.
 
-## Run NCHO
+## Dataset
+We provide our captured raw 3D scans and the corresponding SMPL parameters. Folder "200" contains scans of the single person without any object. Other folders contain scans of the same person with many different objects.
+```
+gdown https://drive.google.com/uc?id=1DMzyS52aRu-s7MPWdaJwbnzQQXXb0ov0
+```
 
+## Run NCHO
 Clone the repository.
 ```
 git clone https://github.com/taeksuu/ncho.git
@@ -32,7 +37,7 @@ Download our pretrained models.
 sh ./download_data.sh
 ```
 
-Run one of the following commands.
+Run one of the following commands for:
 
 **Disentangled Control**
 ```
@@ -51,12 +56,7 @@ python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=interp_obj #
 python test.py expname=200_backpack datamodule=ts_200_bag eval_mode=sample # Random human + objects
 ```
 
-## Dataset
-We provide our captured raw 3D scans and the corresponding SMPL parameters. Folder "200" contains scans of the single person without any object. Other folders contain scans of the same person with many different objects.
-
-
 ## Citation
-
 If you use this code or dataset for your research, please cite our paper:
 
 ```
